@@ -11,22 +11,62 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var heightSlider: UISlider!
+    @IBOutlet weak var weightSlider: UISlider!
+    
+    
+    var bmiBrain: BmiBrain = BmiBrain()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    @IBAction func heightSliderChanged(_ sender: UISlider) {
-        let height = Double(round(100 * sender.value)) / 100.0
+        let height = heightSlider.value.toTwoDecimalPlaces
+        let weight = weightSlider.value.rounded()
         
-        heightLabel.text = String(height) + "m"
+        bmiBrain.height = height
+        bmiBrain.weight = weight
+        
+        updateHeightLabel(with: height)
+        updateWeightLabel(with: weight)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == segueFromHomeVcToResultVC) {
+            guard let resultViewController = segue.destination as? ResultViewController else {
+                return
+            }
+            
+            resultViewController.adviceBasedOnBmi = bmiBrain.adviceBasedOnBmi
+            resultViewController.colorBasedOnBmi = bmiBrain.colorBasedOnBmi
+            resultViewController.bmi = bmiBrain.bmi
+        }
+    }
+    
+    @IBAction func heightSliderChanged(_ sender: UISlider) {
+        let height = sender.value.toTwoDecimalPlaces
+        
+        updateHeightLabel(with: height)
+        
+        bmiBrain.height = height
     }
     
     @IBAction func weightSliderChanged(_ sender: UISlider) {
         let weight = sender.value.rounded()
         
-        weightLabel.text = String(weight) + "kg"
+        updateWeightLabel(with: weight)
+        
+        bmiBrain.weight = weight
     }
     
+    @IBAction func calculateButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: segueFromHomeVcToResultVC, sender: self)
+    }
+    
+    
+    func updateHeightLabel(with height: Float) {
+        heightLabel.text = String(height) + "m"
+    }
+    
+    func updateWeightLabel(with weight: Float) {
+        weightLabel.text = String(weight) + "kg"
+    }
 }
 

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC996BD254F0A4700D29EB2 /* UserMeasurements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC996BC254F0A4700D29EB2 /* UserMeasurements.swift */; };
+		0AC996C1254F0A8600D29EB2 /* BmiBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC996C0254F0A8600D29EB2 /* BmiBrain.swift */; };
+		0AC996C5254F0C2300D29EB2 /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC996C4254F0C2300D29EB2 /* FloatExtension.swift */; };
+		0AC996C8254F160700D29EB2 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC996C7254F160700D29EB2 /* ResultViewController.swift */; };
+		0AC996CB254F1D6100D29EB2 /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC996CA254F1D6100D29EB2 /* SegueIdentifiers.swift */; };
 		AD0B9F7A230D61800065EFD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B9F79230D61800065EFD9 /* AppDelegate.swift */; };
 		AD0B9F7C230D61800065EFD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B9F7B230D61800065EFD9 /* SceneDelegate.swift */; };
 		AD0B9F7E230D61800065EFD9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B9F7D230D61800065EFD9 /* HomeViewController.swift */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AC996BC254F0A4700D29EB2 /* UserMeasurements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMeasurements.swift; sourceTree = "<group>"; };
+		0AC996C0254F0A8600D29EB2 /* BmiBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiBrain.swift; sourceTree = "<group>"; };
+		0AC996C4254F0C2300D29EB2 /* FloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
+		0AC996C7254F160700D29EB2 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		0AC996CA254F1D6100D29EB2 /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
 		AD0B9F76230D61800065EFD9 /* BMI Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD0B9F79230D61800065EFD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD0B9F7B230D61800065EFD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AC996C3254F0C0B00D29EB2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0AC996CA254F1D6100D29EB2 /* SegueIdentifiers.swift */,
+				0AC996C4254F0C2300D29EB2 /* FloatExtension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0AC996CE254F1DD600D29EB2 /* BmiBrain */ = {
+			isa = PBXGroup;
+			children = (
+				0AC996BC254F0A4700D29EB2 /* UserMeasurements.swift */,
+				0AC996C0254F0A8600D29EB2 /* BmiBrain.swift */,
+			);
+			path = BmiBrain;
+			sourceTree = "<group>";
+		};
 		AD0B9F6D230D61800065EFD9 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +89,7 @@
 			children = (
 				AD0B9F79230D61800065EFD9 /* AppDelegate.swift */,
 				AD0B9F7B230D61800065EFD9 /* SceneDelegate.swift */,
+				0AC996C3254F0C0B00D29EB2 /* Utilities */,
 				AD0B9F8F230D63EA0065EFD9 /* Models */,
 				AD0B9F8E230D63E10065EFD9 /* Views */,
 				AD0B9F8D230D63D70065EFD9 /* Controllers */,
@@ -75,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				AD0B9F7D230D61800065EFD9 /* HomeViewController.swift */,
+				0AC996C7254F160700D29EB2 /* ResultViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -90,6 +120,7 @@
 		AD0B9F8F230D63EA0065EFD9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0AC996CE254F1DD600D29EB2 /* BmiBrain */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -121,7 +152,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Angela Yu";
 				TargetAttributes = {
 					AD0B9F75230D61800065EFD9 = {
@@ -166,8 +197,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC996CB254F1D6100D29EB2 /* SegueIdentifiers.swift in Sources */,
 				AD0B9F7E230D61800065EFD9 /* HomeViewController.swift in Sources */,
+				0AC996BD254F0A4700D29EB2 /* UserMeasurements.swift in Sources */,
+				0AC996C8254F160700D29EB2 /* ResultViewController.swift in Sources */,
+				0AC996C5254F0C2300D29EB2 /* FloatExtension.swift in Sources */,
 				AD0B9F7A230D61800065EFD9 /* AppDelegate.swift in Sources */,
+				0AC996C1254F0A8600D29EB2 /* BmiBrain.swift in Sources */,
 				AD0B9F7C230D61800065EFD9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +256,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -280,6 +317,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
