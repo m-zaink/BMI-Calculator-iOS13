@@ -50,11 +50,11 @@ struct BmiBrain {
     
     var colorBasedOnBmi: UIColor {
         if bmi < 18.0 {
-            return .systemYellow
+            return #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         } else if bmi >= 18.0 && bmi <= 25.0 {
-            return .systemGreen
+            return #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
         } else {
-            return .systemRed
+            return #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
         }
     }
 }
