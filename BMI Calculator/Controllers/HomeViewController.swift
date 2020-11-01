@@ -14,7 +14,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var weightSlider: UISlider!
     
-    
     var bmiBrain: BmiBrain = BmiBrain()
     
     override func viewDidLoad() {
@@ -43,17 +42,15 @@ class HomeViewController: UIViewController {
     @IBAction func heightSliderChanged(_ sender: UISlider) {
         let height = sender.value.toTwoDecimalPlaces
         
-        updateHeightLabel(with: height)
-        
         bmiBrain.height = height
+        updateHeightLabel(with: height)
     }
     
     @IBAction func weightSliderChanged(_ sender: UISlider) {
         let weight = sender.value.rounded()
         
-        updateWeightLabel(with: weight)
-        
         bmiBrain.weight = weight
+        updateWeightLabel(with: weight)
     }
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {

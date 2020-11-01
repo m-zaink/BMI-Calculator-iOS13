@@ -58,15 +58,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		0AC996CE254F1DD600D29EB2 /* BmiBrain */ = {
-			isa = PBXGroup;
-			children = (
-				0AC996BC254F0A4700D29EB2 /* UserMeasurements.swift */,
-				0AC996C0254F0A8600D29EB2 /* BmiBrain.swift */,
-			);
-			path = BmiBrain;
-			sourceTree = "<group>";
-		};
 		AD0B9F6D230D61800065EFD9 = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +111,8 @@
 		AD0B9F8F230D63EA0065EFD9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0AC996CE254F1DD600D29EB2 /* BmiBrain */,
+				0AC996BC254F0A4700D29EB2 /* UserMeasurements.swift */,
+				0AC996C0254F0A8600D29EB2 /* BmiBrain.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
