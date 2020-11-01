@@ -28,15 +28,19 @@ class HomeViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == segueFromHomeVcToResultVC) {
+        if segue.identifier == segueFromHomeVcToResultVC {
             guard let resultViewController = segue.destination as? ResultViewController else {
                 return
             }
             
-            resultViewController.adviceBasedOnBmi = bmiBrain.adviceBasedOnBmi
-            resultViewController.colorBasedOnBmi = bmiBrain.colorBasedOnBmi
-            resultViewController.bmi = bmiBrain.bmi
+            prepare(resultViewController)
         }
+    }
+    
+    func prepare(_ viewController: ResultViewController) {
+        viewController.adviceBasedOnBmi = bmiBrain.adviceBasedOnBmi
+        viewController.colorBasedOnBmi = bmiBrain.colorBasedOnBmi
+        viewController.bmi = bmiBrain.bmi
     }
     
     @IBAction func heightSliderChanged(_ sender: UISlider) {
